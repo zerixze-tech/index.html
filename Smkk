@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { text-align:center; margin-top:100px; font-family:Arial; }
+    button { padding:15px 25px; font-size:18px; }
+  </style>
+</head>
+<body>
+
+<h1>Demo Vibrate dengan Delay</h1>
+<p>Klik tombol untuk memulai efek</p>
+<button onclick="startEffect()">Mulai</button>
+
+<script>
+function startEffect(){
+  setTimeout(function() {
+    if (navigator.vibrate) {
+      navigator.vibrate(1000);
+    }
+    alert("Efek selesai!");
+  }, 1000);
+}
+</script>
+
+</body>
+</html>
